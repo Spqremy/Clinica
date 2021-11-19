@@ -1,0 +1,9 @@
+.tabel{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 70%;
+    width: 90%;
+    background-color: rebeccapurple;
+}
