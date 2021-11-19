@@ -1,0 +1,14 @@
+.auth-button {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 3%;
+  width: 200px;
+  height: 30px;
+  background-color: #5c84f7;
+  color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 20px;
+  padding-left: 65px;
+  text-align: center;
+}
