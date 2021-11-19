@@ -1,0 +1,10 @@
+.auth-subtitle {
+  display: flex;
+  margin-top: 1%;
+  margin-left: 5%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+  color: #7bed8a;
+}

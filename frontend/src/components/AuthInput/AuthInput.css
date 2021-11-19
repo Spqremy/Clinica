@@ -1,0 +1,11 @@
+.auth-input {
+  margin-left: 5%;
+  margin-top: 1%;
+  width: 400px;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  border: 1px solid #5c84f7;
+  border-radius: 8px;
+  box-shadow: 5px 5px #888888;
+}

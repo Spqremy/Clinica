@@ -1,0 +1,11 @@
+.auth-title {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 42px;
+  color: #5c84f7;
+}
