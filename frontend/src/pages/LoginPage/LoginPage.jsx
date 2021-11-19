@@ -27,9 +27,9 @@ export default function LoginPage() {
     }
   };
   return (
-    <div className="login">
-      <div className="login-left">
-        <div className="login-left__container">
+    <div>
+      <div>
+        <div>
           <AuthTitle title="Welcome to AppName" />
           <div className="login-error__message">{message}</div>
           <form onSubmit={submit} className="login__form">
@@ -49,15 +49,13 @@ export default function LoginPage() {
             />
 
             <AuthButton name="Log In" />
-            <a className="login__ref" href="/register">
+            <a className="login-ref" href="/register">
               Nu ai un cont? Inregistrare
             </a>
           </form>
         </div>
       </div>
-      <div className="login-right">
-        <AuthImage />
-      </div>
+      <AuthImage />
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.auth-image {
+  height: 100%;
+  display: flex;
+  float: right;
+  margin-top: -42.5%;
+  object-fit: cover;
+}
