@@ -1,14 +1,41 @@
 import React from "react";
 import "./SideBar.css";
+import { useState } from "react";
 //modules
+import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
+import AddPacient from "../../pages/AddPacient";
 
 const Sidebar = (props) => {
+  const [modalIsOpen, setmodelaIsOpen] = useState(false);
+
   return (
     <div className={props.className}>
       <div className="sidebar__line">
-        <Button text="Adauga clienti" className="sidebar__button" />
+        <Button
+          text="Adauga clienti"
+          className="sidebar__button"
+          onClick={() => setmodelaIsOpen(true)}
+        />
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setmodelaIsOpen(false)}
+          className="patient__modal-video"
+          aria-labelledby="contained-modal-title-vcenter"
+        >
+          <div className="patient__container">
+            <div className="patient__inner-modal">
+              <button
+                onClick={() => setmodelaIsOpen(false)}
+                className="patient__button-modal"
+              >
+                X
+              </button>
+            </div>
+            <AddPacient />
+          </div>
+        </Modal>
       </div>
       <div class="sidebar__menu">Meniu</div>
       <ul className="sidebar__pages">
