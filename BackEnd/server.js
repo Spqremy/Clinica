@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const expressLayout = require("express-ejs-layouts");
 const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
@@ -10,11 +11,15 @@ var corsOptions = {
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
+app.use(expressLayout);
+app.set("view engine", "ejs");
 const port = 8080;
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
-
+app.get("/", function (req, res, next) {
+  res.render("layout");
+});
 const db = require("./db.js");
 db.authenticate()
   .then(() => console.log("Connected"))
