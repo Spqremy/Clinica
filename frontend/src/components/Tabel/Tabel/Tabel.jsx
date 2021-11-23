@@ -2,7 +2,7 @@ import React from 'react'
 import "./Tabel.css"
 
 //components
-import Title from "../Title/Title"
+import Title from "../Title/Title/Title"
 import Subtitle from '../Title/Subtitle/Subtitle'
 
 const Tabel = (props) => {
