@@ -19,7 +19,7 @@ export default function LoginPage() {
         "http://localhost:8080/login",
         loginUser
       );
-      window.location.href = "/result";
+      window.location.href = "/home";
       localStorage.setItem("token", loginResponse.data.token);
     } catch (err) {
       console.log(err);
