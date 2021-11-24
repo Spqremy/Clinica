@@ -44,7 +44,7 @@ export default function tabel() {
   return (
     <div className="tabel">
       <div>
-        <table className="table">
+        <div className="table">
           <thead className="thead-light">
             <tr>
               <th>First name</th>
@@ -58,7 +58,7 @@ export default function tabel() {
           </thead>
 
           {renderPatient()}
-        </table>
+        </div>
       </div>
     </div>
   );
