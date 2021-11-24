@@ -6,7 +6,7 @@ import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 import Title from "../Title/Title/Title";
 import Subtitle from "../Title/Subtitle/Subtitle";
 
-export default function tabel() {
+export default function Tabel() {
   const [Patient, setPatient] = useState([]);
   let authtoken = localStorage.getItem("token");
 
@@ -42,24 +42,23 @@ export default function tabel() {
     });
   }
   return (
-    <div className="tabel">
-      <div>
-        <div className="table">
-          <thead className="thead-light">
-            <tr>
-              <th>First name</th>
-              <th>Last name</th>
-              <th>Sex</th>
-              <th>Age</th>
-              <th>Consultation date</th>
-              <th>City</th>
-              <th>Phone</th>
-            </tr>
-          </thead>
+    <div>
+      <div className="table">
+        <thead className="thead-light">
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Sex</th>
+            <th>Age</th>
+            <th>Consultation date</th>
+            <th>City</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
 
-          {renderPatient()}
-        </div>
+        {renderPatient()}
       </div>
+      display of patients
     </div>
   );
 }
