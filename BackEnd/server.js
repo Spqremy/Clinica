@@ -13,7 +13,7 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 // const port = 8080;
-app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT | PORT, () => {
   console.log(`Example app listening at http://localhost:`);
   console.log(process.env.PORT);
 });
