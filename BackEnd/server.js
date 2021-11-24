@@ -11,7 +11,7 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 const port = 8080;
-app.listen(port, () => {
+app.listen(process.port || port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
