@@ -1,6 +1,8 @@
 import React from "react";
 import "./SideBar.css";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
+
 //modules
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
@@ -9,7 +11,12 @@ import AddPacient from "../../pages/AddPacient";
 
 const Sidebar = (props) => {
   const [modalIsOpen, setmodelaIsOpen] = useState(false);
+  const logout = () => {
+    localStorage.removeItem("token");
 
+    // history.push("/Login");
+    window.location.href = "/";
+  };
   return (
     <div className={props.className}>
       <div className="sidebar__line">
@@ -22,14 +29,12 @@ const Sidebar = (props) => {
           isOpen={modalIsOpen}
           onRequestClose={() => setmodelaIsOpen(false)}
           className="patient__modal-video"
-          aria-labelledby="contained-modal-title-vcenter"
-        >
+          aria-labelledby="contained-modal-title-vcenter">
           <div className="patient__container">
             <div className="patient__inner-modal">
               <button
                 onClick={() => setmodelaIsOpen(false)}
-                className="patient__button-modal"
-              >
+                className="patient__button-modal">
                 X
               </button>
             </div>
@@ -44,8 +49,7 @@ const Sidebar = (props) => {
             exact
             to="/"
             className="sidebar__page-button"
-            activeClassName="sidebar__active-btn"
-          >
+            activeClassName="sidebar__active-btn">
             Administrare
           </NavLink>
         </li>
@@ -53,8 +57,7 @@ const Sidebar = (props) => {
           <NavLink
             to="/utilizatori"
             className="sidebar__page-button"
-            activeClassName="sidebar__active-btn"
-          >
+            activeClassName="sidebar__active-btn">
             Utilizatori
           </NavLink>
         </li>
@@ -62,8 +65,7 @@ const Sidebar = (props) => {
           <NavLink
             to="/pacienti"
             className="sidebar__page-button"
-            activeClassName="sidebar__active-btn"
-          >
+            activeClassName="sidebar__active-btn">
             Pacienti
           </NavLink>
         </li>
@@ -71,8 +73,7 @@ const Sidebar = (props) => {
           <NavLink
             to="/companii"
             className="sidebar__page-button"
-            activeClassName="sidebar__active-btn"
-          >
+            activeClassName="sidebar__active-btn">
             Companii
           </NavLink>
         </li>
@@ -80,8 +81,7 @@ const Sidebar = (props) => {
           <NavLink
             to="/registre"
             className="sidebar__page-button"
-            activeClassName="sidebar__active-btn"
-          >
+            activeClassName="sidebar__active-btn">
             Registre
           </NavLink>
         </li>
@@ -94,7 +94,7 @@ const Sidebar = (props) => {
             to="/log-out"
             className="sidebar__page-button"
             activeClassName="sidebar__active-btn"
-          >
+            onClick={logout}>
             Delogheaza-te
           </NavLink>
         </li>
@@ -102,8 +102,7 @@ const Sidebar = (props) => {
           <NavLink
             to="/language"
             className="sidebar__page-button"
-            activeClassName="sidebar__active-btn"
-          >
+            activeClassName="sidebar__active-btn">
             Limba
           </NavLink>
         </li>

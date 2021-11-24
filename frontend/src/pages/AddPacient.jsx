@@ -32,6 +32,7 @@ export default function AddPacient() {
         },
       });
       console.log(newPatient);
+      window.location.href = "/home";
     } catch (err) {
       console.log(err.response.data);
     }

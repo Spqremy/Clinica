@@ -62,7 +62,7 @@ export default function RegisterPage() {
           onchange={(e) => setSamepass(e.target.value)}
         />
         <AuthButton name="Register" />
-        <a className="login-ref" href="/login">
+        <a className="login-ref" href="/">
           Ai deja un cont? Logheaza-te
         </a>
       </form>
