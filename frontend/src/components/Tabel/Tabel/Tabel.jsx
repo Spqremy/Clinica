@@ -7,7 +7,7 @@ import Title from "../Title/Title/Title";
 import Subtitle from "../Title/Subtitle/Subtitle";
 
 export default function tabel() {
-  const [patient, setPatient] = useState([]);
+  const [Patient, setPatient] = useState([]);
   let authtoken = localStorage.getItem("token");
 
   async function getPatients() {
@@ -19,15 +19,16 @@ export default function tabel() {
 
     setPatient(serverResponse.data);
   }
-  for (let a of patient) {
+  for (let a of Patient) {
     console.log(a.id);
   }
 
   useEffect(() => {
     getPatients();
   }, []);
+
   function renderPatient() {
-    return patient.map((ceva) => {
+    return Patient.map((ceva) => {
       return (
         <tbody>
           <h4>{ceva.firstname}</h4>
