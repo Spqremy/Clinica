@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -10,9 +12,10 @@ var corsOptions = {
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
-const port = 8080;
-app.listen(process.port || port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+// const port = 8080;
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Example app listening at http://localhost:`);
+  console.log(process.env.PORT);
 });
 
 const db = require("./db.js");
